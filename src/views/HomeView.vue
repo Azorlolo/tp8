@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <hr/>
+  <div class="conteneur">
+    <section class="converteur">
+      <h2>Taux de change - XPF</h2>  
+    </section>
+    
+    <Tableau :montantXPF="montantXPF" />
+    
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Tableau from '@/components/Tableau.vue'
 
 export default {
-  name: 'HomeView',
   components: {
-    HelloWorld
+    Tableau
+  },
+  
+  data() {
+    return {
+      montantXPF: 1
+    }
   }
 }
 </script>
